@@ -26,6 +26,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.common.js',
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
+      'styles': path.resolve(__dirname, '../src/assets/styles'),
       'components': path.resolve(__dirname, '../src/components')
     }
   },
@@ -87,8 +88,9 @@ module.exports = {
     loaders: utils.cssLoaders({ sourceMap: useCssSourceMap }),
     postcss: [
       require('autoprefixer')({
-        browsers: ['last 2 versions']
-      })
+        browsers: ['last 5 versions']
+      }),
+      require('postcss-import')()
     ]
   }
 }

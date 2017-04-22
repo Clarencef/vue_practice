@@ -1,29 +1,18 @@
 <template>
   <div id="app">
-    <users></users>
+    <TopBar />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Test from './components/test'
-import Users from './components/users'
+import TopBar from 'components/TopBar'
 
 export default {
   name: 'app',
-  components: {
-    Test,
-    Users
-  }
+  components: { TopBar }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
 </style>

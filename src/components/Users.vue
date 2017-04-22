@@ -13,16 +13,29 @@
         <li v-for="user in users"> 
           <input type="checkbox" class="toggle" v-model="user.contacted">
           <span :class="{contacted: user.contacted}">
-            {{user.name}} : {{user.email}} <button v-on:click="deleteUser(user)">x</button>
+            {{user.name}} : {{user.email}} 
+            <button v-on:click="deleteUser(user)">x</button>
+            <!-- v-on 的簡寫
+            <button @click="deleteUser(user)">x</button>
+            -->
           </span>
       </li> 
     </ul>
+    <test-components></test-components>
   </div>
 </template>
 
 <script>
+  // 局部註冊 只有在users 這個component下才可以使用這個Child component，其他component無法單獨使用Child component!
+  const Child = {
+    template: '<div>A custom component!</div>'
+  }
+  // 全域註冊
   export default {
     name: 'users',
+    components: {
+      'test-components': Child
+    },
     data () {
       return {
         newUser: {},
@@ -51,7 +64,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .contacted {
     text-decoration: line-through;
   }
