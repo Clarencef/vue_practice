@@ -6,6 +6,7 @@
         <li><router-link to ="/test">Test</router-link></li>
         <li><router-link to ="/crud">Crud</router-link></li>
         <li><router-link to ="/twitter">Twitter</router-link></li>
+        <li><router-link to ="/note">Note</router-link></li>
       </ul>
     </nav>
   </header>

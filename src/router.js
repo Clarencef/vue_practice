@@ -4,6 +4,7 @@ import Users from './components/Users'
 import Test from './components/test'
 import Crud from './components/crud'
 import TwitterVue from './components/TwitterVue'
+import NotePage from './components/NotePage'
 
 const router = new VueRouter({
   mode: 'history',
@@ -21,6 +22,9 @@ const router = new VueRouter({
     }, {
       path: '/twitter',
       component: TwitterVue
+    }, {
+      path: '/note',
+      component: NotePage
     }
   ]
 })
