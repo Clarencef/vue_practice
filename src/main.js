@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome'
 
 import router from './router'
 import store from './store'
@@ -10,6 +12,7 @@ import './assets/styles/main.scss'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
+Vue.component('icon', Icon)
 
 /* eslint-disable no-new */
 const root = new Vue({
