@@ -32,12 +32,14 @@
 </script>
 
 <style lang="scss">
+@import '~styles/variable';
 .twitterVue {
   margin: 15px auto;
   width: 100%;
   max-width: 600px;
   border: 1px solid lighten(#6a737b,20%);
   border-radius: 3px;
+  background: $test;
   .twitterVue-title {
     margin: 0;
     line-height: 2;

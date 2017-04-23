@@ -72,10 +72,10 @@
         console.log('you hit enter')
       },
       add: function () {
-        this.increment({ amount: 10 })
+        this.INCREMENT({ amount: 10 })
       },
       ...mapMutations([
-        'increment'
+        'INCREMENT'
       ])
     }
   }

@@ -1,6 +1,8 @@
 const state = {
   count: 0,
-  tweet: ''
+  tweet: '',
+  notes: [],
+  activeNote: {}
 }
 
 export default state
