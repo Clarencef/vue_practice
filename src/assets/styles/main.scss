@@ -1,14 +1,28 @@
 @import "~normalize.css";
-
 html,
 body {
   margin: 0;
   height: 100%;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 #app {
   height: 100%;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -26,7 +40,12 @@ input {
 }
 
 button {
-  appearance:none;
+  appearance: none;
   border: 0;
   background: white;
+}
+
+@mixin box($w, $h: $w) {
+  width: $w;
+  height: $h;
 }

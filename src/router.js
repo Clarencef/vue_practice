@@ -1,5 +1,6 @@
 import VueRouter from 'vue-router'
 
+import Main from './components/Main'
 import Users from './components/Users'
 import Test from './components/test'
 import Crud from './components/crud'
@@ -12,7 +13,7 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      component: Users
+      component: Main
     }, {
       path: '/test',
       component: Test
@@ -25,6 +26,9 @@ const router = new VueRouter({
     }, {
       path: '/note',
       component: NotePage
+    }, {
+      path: '/user',
+      component: Users
     }
   ]
 })
